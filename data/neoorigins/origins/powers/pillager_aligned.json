@@ -1,0 +1,421 @@
+{
+    "name": "Pillager Aligned",
+    "description": "Villagers don't like you, and pillagers like you!",
+    "type": "origins:multiple",
+    "no_trading_with_villagers": {
+        "type": "origins:prevent_entity_use",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:villager"
+            }
+        }
+    },
+    "villager_loot": {
+        "type": "origins:action_on_hit",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:villager"
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:if_else_list",
+                "actions": [
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:armorer\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:armorer\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:butcher\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:butcher\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:cartographer\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:cartographer\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:cleric\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:cleric\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:farmer\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:farmer\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:fisherman\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:fisherman\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:fletcher\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:fletcher\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:leatherworker\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:leatherworker\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:librarian\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:librarian\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:mason\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:mason\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:shepherd\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:shepherd\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:toolsmith\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:toolsmith\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={VillagerData:{profession:\"minecraft:weaponsmith\"}}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:weaponsmith\""
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:entity_type",
+                            "entity_type": "minecraft:villager"
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "data modify entity @s DeathLootTable set value \"witch:none\""
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "ride_ravager": {
+        "type": "origins:action_on_entity_use",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:ravager"
+            }
+        },
+        "bientity_action": {
+            "type": "origins:mount"
+        }
+    },
+    "drops": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:entities/witch": "minecraft:empty",
+            "minecraft:entities/ravager": "minecraft:empty",
+            "minecraft:entities/pillager": "minecraft:empty",
+            "minecraft:entities/vindicator": "minecraft:empty",
+            "minecraft:entities/evoker": "minecraft:empty",
+            "minecraft:entities/illusioner": "minecraft:empty"
+        }
+    },
+    "callback": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add witch"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team add Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join Illagers @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=witch] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=ravager] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=pillager] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=vindicator] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=evoker] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=vex] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=illusioner] run team join Illagers"
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s remove witch"
+                }
+            ]
+        },
+        "entity_action_respawned": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add witch"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team add Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join Illagers @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=witch] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=ravager] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=pillager] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=vindicator] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=evoker] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=vex] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=illusioner] run team join Illagers"
+                }
+            ]
+        }
+    },
+    "over_time": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add witch"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join Illagers @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=witch] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=ravager] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=pillager] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=vindicator] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=evoker] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=vex] run team join Illagers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=illusioner] run team join Illagers"
+                }
+            ]
+        }
+    },
+    "angry": {
+        "type": "origins:target_action_on_hit",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:witch"
+                },
+                {
+                    "type": "origins:entity_group",
+                    "group": "illager"
+                }
+            ]
+        },
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tag @s add angry"
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+    "terrible_reputation": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=villager] run data merge entity @s {Gossips:[{Type:\"major_negative\",Value:100,Target:[I;1,1,1,1]}]}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=villager] run data modify entity @s Gossips[0].Target set from entity @p[tag=witch] UUID"
+                }
+            ]
+        }
+    },
+    "illager_group": {
+        "type": "origins:entity_group",
+        "group": "illager",
+        "hidden": true
+    }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Drink potion",
+  "decription": "Drink some usefull potion",
+  "type": "neoorigins:active_ability",
+  "cooldown_ticks": 80,
+  "entity_action": {
+    "type": "neoorigins:and",
+    "actions": [
+        {
+            "type": "neoorigins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "neoorigins:on_fire"
+                    },
+                    "action": {
+                        "type": "neoorigins:apply_effect",
+                        "effect": "minecraft:fire_resistance",
+                        "duration": 200,
+                        "amplifier": 0
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "neoorigins:fall_distance",
+                        "comparison": ">=",
+                        "compare_to": 4
+                    },
+                    "action": {
+                        "type": "neoorigins:apply_effect",
+                        "effect": "minecraft:slow_falling",
+                        "duration": 200,
+                        "amplifier": 0
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "neoorigins:submerged_in_water",
+                        "fluid": "minecraft:water"
+                    },
+                    "action": {
+                        "type": "neoorigins:apply_effect",
+                        "effect": "minecraft:water_breathing",
+                        "duration": 200,
+                        "amplifier": 0
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "neoorigins:constant",
+                        "value": true
+                    },
+                    "action": {
+                        "type": "neoorigins:apply_effect",
+                        "effect": "minecraft:speed",
+                        "duration": 200,
+                        "amplifier": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "neoorigins:execute_command",
+            "command": "playsound minecraft:entity.witch.drink voice @s",
+            "permission_level": 4
+        }
+    ]
+  }
+}

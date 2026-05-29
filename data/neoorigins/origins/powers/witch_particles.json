@@ -1,0 +1,20 @@
+{
+    "type": "origins:particle",
+    "hidden": true,
+    "particle": "minecraft:witch",
+    "frequency": 4,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:sneaking"
+            },
+            {
+                "inverted": true,
+                "type": "origins:status_effect",
+                "effect": "minecraft:invisibility"
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Potion Mastery",
+  "description": "Positive status effects have their duration doubled for you.",
+  "type": "neoorigins:action_on_event",
+  "event": "mod_potion_duration",
+  "modifier": {
+    "operation": "multiplication",
+    "value": 2.0
+  }
+}

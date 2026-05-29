@@ -1,0 +1,35 @@
+{
+  "name": "Throw potion",
+  "decription": "Throw some potion",
+  "type": "neoorigins:active_ability",
+  "cooldown_ticks": 160,
+  "entity_action": {
+    "type": "neoorigins:choice",
+    "actions": [
+        {
+            "type": "neoorigins:fire_projectile",
+            "entity_type": "minecraft:splash_potion",
+            "effect_type": "poison",
+            "tag": "{Item:{id:\"minecraft:splash_potion\",Count:1b,tag:{Potion:\"minecraft:poison\"}}}"
+        },
+        {
+            "type": "neoorigins:fire_projectile",
+            "entity_type": "minecraft:splash_potion",
+            "effect_type": "slowness",
+            "tag": "{Item:{id:\"minecraft:splash_potion\",Count:1b,tag:{Potion:\"minecraft:slowness\"}}}"
+        },
+        {
+            "type": "neoorigins:fire_projectile",
+            "entity_type": "minecraft:splash_potion",
+            "effect_type": "weakness",
+            "tag": "{Item:{id:\"minecraft:splash_potion\",Count:1b,tag:{Potion:\"minecraft:weakness\"}}}"
+        },
+        {
+            "type": "neoorigins:fire_projectile",
+            "entity_type": "minecraft:splash_potion",
+            "effect_type": "harming",
+            "tag": "{Item:{id:\"minecraft:splash_potion\",Count:1b,tag:{Potion:\"minecraft:harming\"}}}"
+        }
+    ]
+  }
+}

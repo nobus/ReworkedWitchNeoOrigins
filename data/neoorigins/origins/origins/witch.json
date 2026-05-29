@@ -1,0 +1,26 @@
+{
+    "name": "Witch",
+    "description": "Cruel and cackling, Witches are masters of brewing, and are great with magic.",
+    "powers": [
+        "neoorigins:witch_particles",
+        "neoorigins:witcharsenal",
+        "neoorigins:witchyhealth",
+        "neoorigins:witchnoises",
+        "neoorigins:witch_starting_equipment",
+        "neoorigins:potion_action",
+        "neoorigins:pillager_aligned",
+        "neoorigins:sylvan_mobs_ignore",
+        "neoorigins:betterpotspositive"
+    ],
+    "icon": "minecraft:brewing_stand",
+    "order": 4,
+    "impact": "high",
+    "upgrades": [],
+    "tier_powers": [],
+    "spawn_location": {
+        "dimension": "minecraft:overworld",
+        "biome_tag": "minecraft:is_swamp",
+        "structure": "minecraft:swamp_hut",
+        "spawn_strategy": "center"
+    }
+}

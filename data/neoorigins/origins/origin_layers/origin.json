@@ -1,0 +1,11 @@
+{
+  "order": 1,
+  "name": "origins.layer.origin",
+  "origins": [
+    "neoorigins:witch"
+  ],
+  "allow_random": true,
+  "auto_choose": false,
+  "hidden": false,
+  "enabled": true
+}

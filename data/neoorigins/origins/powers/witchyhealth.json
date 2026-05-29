@@ -1,0 +1,10 @@
+{
+    "name": "Witchy Health",
+    "description": "Learning the magical arts has granted you slightly more health.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.max_health",
+        "value": 4,
+        "operation": "addition"
+    }
+}

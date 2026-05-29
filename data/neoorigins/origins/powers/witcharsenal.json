@@ -1,0 +1,11 @@
+{
+    "name": "Witch Arsenal",
+    "description": "You have a small arsenal at your disposal.",
+    "type": "origins:inventory",
+    "title": "Witch Arsenal",
+    "container_type": "hopper",
+    "drop_on_death": true,
+    "key": {
+        "key": "key.origins.secondary_active"
+    }
+}

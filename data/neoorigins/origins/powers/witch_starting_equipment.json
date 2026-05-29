@@ -1,0 +1,6 @@
+{
+  "type": "neoorigins:starting_equipment",
+  "grant_id": "witch_starting_equipment",
+  "item": "minecraft:nether_wart",
+  "amount": 8
+}
